@@ -6,7 +6,7 @@
   tasks:
     - name: Ensure deployment directory exists
       ansible.builtin.file:
-        path: /home/4AD23CS053/thejan/deployment
+        path: 4AD23CS053/thejan/deployment
 
         state: directory
         mode: '0755'
@@ -14,5 +14,5 @@
     - name: Copy the artifact to the deployment directory
       ansible.builtin.copy:
         src: /var/lib/jenkins/workspace/HelloMaven-CI/target/HelloMaven-1.0-SNAPSHOT.jar
-        dest:  /home/4AD23CS053/thejan/deployment/HelloMaven.jar
+        dest: 4AD23CS053/thejan/deployment/HelloMaven.jar
         remote_src: yes
